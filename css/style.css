@@ -124,8 +124,14 @@ h3, h4, h5, h6{
 }
 
 /* CAROUSEL IMAGES */
+.logo{
+    
+    width: 200px;
+    height: auto;
+}
 .banner{
     position: relative;
+    
 }
 .banner .owl-theme .item{
     height: 100vh;
@@ -133,15 +139,6 @@ h3, h4, h5, h6{
     background-position:center;
 }
 
-.overlay-bg{
-    background-color: var(--color-dark);
-    opacity: .6;
-    z-index: 2;
-}
-.item .container{
-    position: relative;
-    height: 100%;
-}
 .caption {
     position: absolute;
     width: 100%;
@@ -163,7 +160,7 @@ h3, h4, h5, h6{
 
 /* carousel nav */
 .custom-nav {
-    position: absolute;
+    position: fixed;
     top: 45%;
     left: 0;
     right: 0;
@@ -188,8 +185,10 @@ h3, h4, h5, h6{
 }
 
 /* WELCOME CONTENT */
+
 .about-content {
     padding: 30px 20px;
+    
 }
 .about-content p {
     line-height: 30px;
@@ -301,6 +300,8 @@ h3, h4, h5, h6{
     max-width: 100px;
     float: left;
     margin: 5px 0 0 5px;
+    border-radius: 50%;
+    
 }
 .testimonial-content *{
     color:var(--color-light2);
@@ -327,12 +328,12 @@ h3, h4, h5, h6{
     text-align: center;
     margin-bottom: 60px;
 }
-.contact-desc h1 {
+.contact-desc h2 {
     color: var(--color-dark);
     font-weight: 700;
 }
 .contact-desc p {
-    font-size: 1.4em;
+    font-size: 1em;
 }
 .contact-form {
     max-width: 50%;
@@ -380,3 +381,42 @@ h3, h4, h5, h6{
 .whatsapp{
     color:red;
 }
+.video-container{
+   
+    width: 100%;
+    height: 100vh;
+  position: relative;
+    
+  }
+      
+  iframe {
+    
+
+    
+    
+    width: 100%;
+    height: 100%;
+   
+    transform: translate(-50%, -50%);
+  }
+  
+  @media (max-width: 767px) { /* Apply styles only on devices with a maximum width of 767px (typically mobile devices) */
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* Set the aspect ratio (16:9) for the video container */
+      height: 0;
+      overflow: hidden;
+      margin-top: 85px;
+    }
+  
+    .video-container iframe {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  
+  
